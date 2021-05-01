@@ -11,7 +11,7 @@ get_data <- function(call) {
   }
   
   if (response$status_code != 200) {
-    stop(paste0("ERROR: The status call is ", response$status_code))
+    stop(paste0("ERROR: API request failed; status call is ", response$status_code))
   }
   
   response_content <-
@@ -21,4 +21,16 @@ get_data <- function(call) {
     jsonlite::fromJSON(response_content, flatten = TRUE)[[1]]
   
   data
+}
+
+#' Tidy up intensity results column names
+#'
+#' @param result a data frame with raw results from Carbon Intensity API 
+#'
+#' @return data frame
+#'
+clean_colnames <- function(result) {
+  clean_names <- gsub('intensity.', '', colnames(result))
+  colnames(result) <- clean_names
+  result
 }

@@ -5,7 +5,14 @@
 
 <!-- badges: start -->
 
+[![R-CMD-check](https://github.com/KKulma/intensegRid/workflows/R-CMD-check/badge.svg)](https://github.com/KKulma/intensegRid/actions)
+[![Codecov test
+coverage](https://codecov.io/gh/KKulma/intensegRid/branch/master/graph/badge.svg)](https://codecov.io/gh/KKulma/intensegRid?branch=master)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/intensegRid)](https://CRAN.R-project.org/package=intensegRid)
 <!-- badges: end -->
+
+# intensegRid <img src='man/figures/logo.png' align="right" height="200" /></a>
 
 This package is an API wrapper for [National Grid’s Carbon Intensity
 API](https://carbonintensity.org.uk/). The API provides information on
@@ -14,7 +21,13 @@ per unit of energy consumed - for the UK.
 
 ## Installation
 
-You can install the development version from
+Install the latest CRAN package with:
+
+``` r
+install.packages("intensegRid")
+```
+
+Or you can install the development version from
 [GitHub](https://github.com/) with:
 
 ``` r
